@@ -5,8 +5,17 @@ defmodule TodoWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", TodoWeb do
+  scope "/api" do
     pipe_through :api
+
+    if Mix.env == :dev do
+      forward "/graphiql", Absinthe.Plug.GraphiQL,
+        schema: TodoWeb.Schema
+    end
+
+    forward "/", Absinthe.Plug,
+    schema: TodoWeb.Schema
+
   end
 
   # Enables LiveDashboard only for development

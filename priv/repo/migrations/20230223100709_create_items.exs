@@ -6,7 +6,7 @@ defmodule Todo.Repo.Migrations.CreateItems do
       add :id, :binary_id, primary_key: true
       add :content, :string
       add :completed, :boolean, default: false, null: false
-      add :list_id, references(:lists, on_delete: :nothing, type: :binary_id)
+      add :list_id, references(:lists, on_delete: :delete_all, type: :binary_id)
 
       timestamps()
     end
