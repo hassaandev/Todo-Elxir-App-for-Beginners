@@ -19,7 +19,7 @@ defmodule TodoWeb.Graphql.SchemaResolver do
     end
   end
 
-  def delete_list(_parent, %{id: list_id} = args, _info) do
+  def delete_list(_parent, %{id: list_id} = _args, _info) do
     Lists.get_list(list_id)
     |> case do
       nil -> {:error, "List with id '#{list_id}' doesn't exist"}
