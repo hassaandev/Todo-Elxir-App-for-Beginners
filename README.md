@@ -396,7 +396,7 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
      	move `todo/lib/todo/list.ex` to `todo/lib/todo/schema/list.ex`
      	move `todo/lib/todo/item.ex` to `todo/lib/todo/schema/item.ex`
 
-15. Add Changeset Handler Middleware inside graphql/middleware folder:
+15. Add Changeset Error Handler Middleware inside graphql/middleware folder:
  `todo/lib/todo_web/graphql/middleware/changeset_errors.ex`:
 
      ```elixir
