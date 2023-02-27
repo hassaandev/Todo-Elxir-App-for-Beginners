@@ -1,6 +1,6 @@
 # Todo
 
-> Todo App using Elixir/Phoenix, GraphQL and Postgres
+> Todo App with Cleanup using Elixir/Phoenix, GraphQL and Postgres
 
 To start your Phoenix server:
 
